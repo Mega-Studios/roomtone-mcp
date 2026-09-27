@@ -1,0 +1,48 @@
+{
+  "name": "roomtone-mcp",
+  "version": "0.2.0",
+  "description": "MCP server that lets AI agents work with your Roomtone meeting notes: list recordings, read write-ups, add a source, chat with what was said, and get the transcript.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mega-Studios/roomtone-mcp"
+  },
+  "type": "module",
+  "bin": {
+    "roomtone-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "roomtone",
+    "meeting notes",
+    "meeting recorder",
+    "ai",
+    "claude"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.0",
+    "typescript": "^6.0.3"
+  },
+  "homepage": "https://roomtone.io/mcp",
+  "bugs": {
+    "url": "https://github.com/Mega-Studios/roomtone-mcp/issues"
+  },
+  "mcpName": "io.roomtone/roomtone"
+}
